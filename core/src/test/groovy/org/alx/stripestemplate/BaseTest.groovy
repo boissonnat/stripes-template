@@ -1,4 +1,4 @@
-package org.alx.stripestemplate.model
+package org.alx.stripestemplate
 
 import org.hibernate.Transaction
 import org.hibernate.Session
