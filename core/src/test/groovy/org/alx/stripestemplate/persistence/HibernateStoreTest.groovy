@@ -89,7 +89,7 @@ class HibernateStoreTest extends BaseTest{
     }
 
     doInTx {s->
-      def buildings = s.load(Building.class)
+      def buildings = s.load(MyFakeObject.class)
       assert buildings instanceof List
       assert buildings != null
       assert buildings.contains(mf1)
