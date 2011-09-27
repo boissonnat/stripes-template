@@ -1,17 +1,28 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: #FFFFFF;
+/*
+ * Redefine HTML basic markup
+ */
+h1{
+    font-size: 40px;
 }
-body, td, th {
-  color: #000000;
-  font-family: "Luxi Sans", Arial, sans-serif;
-  font-size: 10pt;
+
+
+/*
+ * Define the ID's
+ */
+#header{
+    padding: 10px;
+    height: 148px;
 }
-div#main {
-  padding: 8px;
+
+#header h1 {
+    background: url("img/app-icon.png") no-repeat;
+    padding: 45px 0 45px 140px;
 }
-a, a:visited {
-  color: #0000FF;
+
+/*
+ * Define the classes
+ */
+.slogan {
+    font-size: 20px;
 }
+
