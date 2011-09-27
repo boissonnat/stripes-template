@@ -19,6 +19,37 @@ h1{
     padding: 45px 0 45px 140px;
 }
 
+#navbar ul {
+    border-top:solid 1px #BFBFBF;
+    border-bottom:solid 1px #BFBFBF;
+    padding: 5px;
+}
+
+#navbar li {
+    display: inline;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: solid 1px #BFBFBF ;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #A65353;
+
+}
+
+#main {
+     min-height: 350px;    
+}
+
+#footer {
+    border-top: solid 1px #BFBFBF;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    color: #A65353;
+}
+
 /*
  * Define the classes
  */
