@@ -5,6 +5,10 @@ import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
+
+/**
+ * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
+ */
 @UrlBinding("/Home.htm")
 public class HomeActionBean extends BaseActionBean {
 

@@ -1,11 +1,7 @@
 package org.alx.stripestemplate.webtests
 
 /**
- * Created by IntelliJ IDEA.
- * User: boissonnat
- * Date: 27/09/11
- * Time: 13:40
- * To change this template use File | Settings | File Templates.
+ * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
  */
 class HomePageTest  extends WebTestBase{
 
