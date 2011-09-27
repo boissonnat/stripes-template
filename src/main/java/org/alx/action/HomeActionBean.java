@@ -8,9 +8,11 @@ import net.sourceforge.stripes.action.UrlBinding;
 @UrlBinding("/Home.htm")
 public class HomeActionBean extends BaseActionBean {
 
+    private static final String VIEW = "/WEB-INF/jsp/home.jsp";
+
     @DefaultHandler
     public Resolution view() {
-        return new ForwardResolution("/WEB-INF/jsp/home.jsp");
+        return new ForwardResolution(VIEW);
     }
 
     public String getJavaVersion() {
