@@ -1,4 +1,4 @@
-package org.alx.action;
+package org.alx.stripestemplate.action;
 
 import net.sourceforge.stripes.action.ActionBean;
 import net.sourceforge.stripes.action.ActionBeanContext;

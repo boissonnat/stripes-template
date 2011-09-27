@@ -1,4 +1,4 @@
-package org.alx.action;
+package org.alx.stripestemplate.action;
 
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.ForwardResolution;
