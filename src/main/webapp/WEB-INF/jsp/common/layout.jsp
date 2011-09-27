@@ -10,7 +10,10 @@
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>${title}</title>
+        <link rel="icon" type="image/png" href="${contextPath}/css/img/app-icon.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="${contextPath}/css/img/app-icon.png" />
         <link rel="stylesheet" type="text/css" href="${contextPath}/css/reset.css">
         <link rel="stylesheet" type="text/css" href="${contextPath}/css/style.css">
         <s:layout-component name="head">
