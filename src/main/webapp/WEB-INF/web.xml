@@ -34,6 +34,11 @@
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
 
+     <listener>
+        <display-name>MyInitListener</display-name>
+        <listener-class>org.alx.stripestemplate.stripes.noext.MyInitListener</listener-class>
+    </listener>
+
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>*.htm</url-pattern>
