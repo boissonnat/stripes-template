@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/jsp/taglibs.jsp" %>
+<%@ include file="/WEB-INF/jsp/common/taglibs.jsp" %>
 
 <s:layout-render name="/WEB-INF/jsp/layout.jsp" title="Welcome">
   <s:layout-component name="body">
