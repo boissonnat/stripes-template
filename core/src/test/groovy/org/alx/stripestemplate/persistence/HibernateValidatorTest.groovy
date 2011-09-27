@@ -1,6 +1,6 @@
 package org.alx.stripestemplate.persistence
 
-import org.alx.stripestemplate.model.BaseTest
+import org.alx.stripestemplate.BaseTest
 import org.junit.Test
 import org.alx.stripestemplate.model.MyFakeObject
 
