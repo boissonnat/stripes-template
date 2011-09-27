@@ -1,11 +1,11 @@
 <%@ include file="/WEB-INF/jsp/common/taglibs.jsp" %>
 
-<s:layout-render name="/WEB-INF/jsp/common/layout.jsp" title="Home">
+<fmt:message var="title" key="home.page.title"/>
+<s:layout-render name="/WEB-INF/jsp/common/layout.jsp" title="${title}">
     <s:layout-component name="body">
-        <p>Yeah !</p>
+        <h1><fmt:message key="home.title"/></h1>
         <p>
-            This is the home page for the unknown user<br/>
-            Try to login to see the admin page and the user page.
+            <fmt:message key="home.content"/>
         </p>
     </s:layout-component>
 </s:layout-render>
