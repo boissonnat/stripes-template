@@ -30,7 +30,10 @@
 
     <%-- The NavBar --%>
     <div id="navbar">
-
+        <ul>
+            <li><s:link beanclass="org.alx.action.HomeActionBean"><fmt:message key="application.navbar.home"/> </s:link></li>
+            <li><s:link beanclass="org.alx.action.AboutActionBean"><fmt:message key="application.navbar.about"/> </s:link></li>
+        </ul>
     </div>
 
     <%-- The main content --%>
