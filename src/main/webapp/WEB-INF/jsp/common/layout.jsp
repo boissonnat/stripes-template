@@ -43,9 +43,7 @@
     </div>
 
     <%-- The footer --%>
-    <div id="footer">
-        This is your footer !
-    </div>
+    <div id="footer">This is your footer !</div>
 
     </body>
     </html>
