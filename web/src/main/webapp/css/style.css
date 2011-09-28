@@ -26,6 +26,12 @@ p{
     height: 148px;
 }
 
+#logout {
+    position:absolute;
+    right:20px;
+    top: 70px;
+}
+
 #navbar ul {
     border-top:solid 1px #BFBFBF;
     border-bottom:solid 1px #BFBFBF;

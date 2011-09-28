@@ -21,7 +21,8 @@ class LayoutPageTest extends WebTestBase{
 
             // Check navbar
             verifyXPath xpath:"/html/body/div[2]/ul/li[1]/a", text:'Home'
-            verifyXPath xpath:"/html/body/div[2]/ul/li[2]/a", text:'About'
+            verifyXPath xpath:"/html/body/div[2]/ul/li[2]/a", text:'Log-in'
+            verifyXPath xpath:"/html/body/div[2]/ul/li[3]/a", text:'About'
 
             // Check navbar
             verifyXPath xpath:"/html/body/div[4]", text:'This is your footer !'

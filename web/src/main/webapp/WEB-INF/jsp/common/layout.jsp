@@ -5,6 +5,9 @@
 
 <fmt:setBundle basename="StripesResources"/>
 
+<s:useActionBean beanclass="org.alx.stripestemplate.action.helper.UserHelper" var="usermgr"/>
+<c:set var="user" value="${usermgr.user}"/>
+
 <s:layout-definition>
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -26,12 +29,33 @@
         <h1><fmt:message key="application.header.title"/> <br/>
             <span class="slogan"><fmt:message key="application.header.slogan"/></span>
         </h1>
+        <c:choose>
+            <c:when test="${not empty usermgr.user}">
+                <div id="logout">
+                    <fmt:message key="loggedAs"/>
+                    <b><i>${usermgr.user.email} </i></b>
+                    |
+                    <s:link beanclass="org.alx.stripestemplate.action.LogoutActionBean">
+                        <fmt:message key="application.logout"/>
+                    </s:link>
+                </div>
+            </c:when>
+            <%--<c:otherwise>--%>
+                <%--<div id="logout">--%>
+                    <%--<s:link beanclass="fr.cstb.sop.smartimmo.action.LoginActionBean">--%>
+                        <%--<img src="${contextPath}/css/images/icons/login-icon.png" alt="login">--%>
+                        <%--<fmt:message key="application.login"/>--%>
+                    <%--</s:link>--%>
+                <%--</div>--%>
+            <%--</c:otherwise>--%>
+        </c:choose>
     </div>
 
     <%-- The NavBar --%>
     <div id="navbar">
         <ul>
             <li><s:link beanclass="org.alx.stripestemplate.action.HomeActionBean"><fmt:message key="application.navbar.home"/> </s:link></li>
+            <li><s:link beanclass="org.alx.stripestemplate.action.LoginActionBean"><fmt:message key="application.navbar.login"/> </s:link></li>
             <li><s:link beanclass="org.alx.stripestemplate.action.AboutActionBean"><fmt:message key="application.navbar.about"/> </s:link></li>
         </ul>
     </div>
