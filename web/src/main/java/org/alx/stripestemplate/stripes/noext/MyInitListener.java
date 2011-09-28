@@ -3,6 +3,7 @@ package org.alx.stripestemplate.stripes.noext;
 import org.alx.stripestemplate.model.Role;
 import org.alx.stripestemplate.model.User;
 import org.alx.stripestemplate.persistence.HibernateStore;
+import org.alx.stripestemplate.util.AppConstants;
 import org.hibernate.Transaction;
 
 import javax.servlet.ServletContext;
@@ -37,10 +38,10 @@ public class MyInitListener implements ServletContextListener {
 
         // Create Roles
         Role userRole = new Role();
-        userRole.setName("userRole");
+        userRole.setName(AppConstants.ROLE_USER);
 
         Role adminRole = new Role();
-        adminRole.setName("adminRole");
+        adminRole.setName(AppConstants.ROLE_ADMIN);
 
 
         // Helper : create list with role
