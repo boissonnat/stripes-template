@@ -16,6 +16,24 @@ a {
     text-decoration: none;
 }
 
+input {
+    -moz-border-radius:2px;
+    border: solid 1px #A65353;
+}
+
+input[type=submit] {
+    background-color: #A65353;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
 /*
  * Define the ID's
  */
@@ -82,4 +100,26 @@ a.login-link {
     padding-left: 30px;
     padding-right: 10px;
 }
+
+table.form{
+
+}
+
+td.form-label {
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+td.form-value {
+
+}
+
+td.form-submit {
+    text-align: right;
+    padding-top: 10px;
+}
+
+
 
