@@ -11,6 +11,11 @@ p{
     padding-bottom: 10px;
 }
 
+a {
+    color: #A65353;
+    text-decoration: none;
+}
+
 /*
  * Define the ID's
  */
@@ -26,7 +31,7 @@ p{
     height: 148px;
 }
 
-#logout {
+#user-info {
     position:absolute;
     right:20px;
     top: 70px;
@@ -45,12 +50,6 @@ p{
     padding-left: 10px;
     padding-right: 10px;
     border-right: solid 1px #BFBFBF ;
-}
-
-#navbar a {
-    text-decoration: none;
-    color: #A65353;
-
 }
 
 #main {
@@ -73,5 +72,14 @@ p{
  */
 .slogan {
     font-size: 20px;
+}
+
+a.login-link {
+    background: url("img/login-icon.png") no-repeat 5px 0.4em  ;
+    border-bottom: solid 1px #A65353;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 10px;
 }
 

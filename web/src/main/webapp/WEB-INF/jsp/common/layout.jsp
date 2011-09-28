@@ -29,26 +29,27 @@
         <h1><fmt:message key="application.header.title"/> <br/>
             <span class="slogan"><fmt:message key="application.header.slogan"/></span>
         </h1>
-        <c:choose>
-            <c:when test="${not empty usermgr.user}">
-                <div id="logout">
+        <div id="user-info">
+            <c:choose>
+                <c:when test="${not empty usermgr.user}">
+
                     <fmt:message key="loggedAs"/>
                     <b><i>${usermgr.user.email} </i></b>
                     |
                     <s:link beanclass="org.alx.stripestemplate.action.LogoutActionBean">
                         <fmt:message key="application.logout"/>
                     </s:link>
-                </div>
-            </c:when>
-            <%--<c:otherwise>--%>
-                <%--<div id="logout">--%>
-                    <%--<s:link beanclass="fr.cstb.sop.smartimmo.action.LoginActionBean">--%>
-                        <%--<img src="${contextPath}/css/images/icons/login-icon.png" alt="login">--%>
-                        <%--<fmt:message key="application.login"/>--%>
-                    <%--</s:link>--%>
-                <%--</div>--%>
-            <%--</c:otherwise>--%>
-        </c:choose>
+
+                </c:when>
+                <c:otherwise>
+
+                        <s:link beanclass="org.alx.stripestemplate.action.LoginActionBean" class="login-link">
+                            <fmt:message key="application.login"/>
+                        </s:link>
+
+                </c:otherwise>
+            </c:choose>
+        </div>
     </div>
 
     <%-- The NavBar --%>
