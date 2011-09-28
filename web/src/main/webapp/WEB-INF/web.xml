@@ -21,28 +21,25 @@
         </init-param>
     </filter>
 
-    <servlet>
-        <servlet-name>DispatcherServlet</servlet-name>
-        <servlet-class>net.sourceforge.stripes.controller.DispatcherServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
+    <filter>
+        <filter-name>DynamicMappingFilter</filter-name>
+        <filter-class>
+            net.sourceforge.stripes.controller.DynamicMappingFilter
+        </filter-class>
+    </filter>
 
     <filter-mapping>
-        <filter-name>StripesFilter</filter-name>
-        <servlet-name>DispatcherServlet</servlet-name>
+        <filter-name>DynamicMappingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
     </filter-mapping>
 
      <listener>
         <display-name>MyInitListener</display-name>
         <listener-class>org.alx.stripestemplate.stripes.noext.MyInitListener</listener-class>
     </listener>
-
-    <servlet-mapping>
-        <servlet-name>DispatcherServlet</servlet-name>
-        <url-pattern>*.htm</url-pattern>
-    </servlet-mapping>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
