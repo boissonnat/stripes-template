@@ -27,6 +27,19 @@ public class User extends ModelBase {
     )
     private List<Role> roles;
 
+
+    ///////////////////////////////
+    //     Business Methods      //
+    ///////////////////////////////
+
+    public boolean hasRole(String roleName){
+        for (Role r : getRoles()){
+            if (r.getName().equals(roleName))
+                return true;
+        }
+        return false;
+    }
+
     ///////////////////////////////////
     //       GETTERS / SETTERS       //
     ///////////////////////////////////
