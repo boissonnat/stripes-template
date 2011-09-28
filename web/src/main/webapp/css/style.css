@@ -6,6 +6,11 @@ h1{
     padding-bottom: 20px;
 }
 
+h2{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
 p{
     padding-left: 20px;
     padding-bottom: 10px;
@@ -121,5 +126,23 @@ td.form-submit {
     padding-top: 10px;
 }
 
+.border-top {
+    margin: 30px;
+    padding-top: 15px;
+    padding-left: 50px;
+    border-top: solid 1px #BFBFBF; 
+}
 
+ul.arrow {
+    padding-left: 50px;
+}
 
+li.arrow{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+li.arrow::before {
+    content: ">> ";
+    color: #A65353
+}

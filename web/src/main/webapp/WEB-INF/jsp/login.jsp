@@ -28,5 +28,14 @@
             <s:hidden name="loginUrl"/>
         </s:form>
 
+        <%-- Register or forgot password --%>
+        <div class="border-top">
+            <h2><fmt:message key="login.links.title"/> </h2>
+            <ul class="arrow">
+                <li class="arrow"><s:link beanclass="org.alx.stripestemplate.action.RegisterActionBean"><fmt:message key="login.link.register"/> </s:link></li>
+                <li class="arrow"><s:link beanclass="org.alx.stripestemplate.action.ForgetPasswordActionBean"><fmt:message key="login.link.passwordforget"/> </s:link></li>
+            </ul>
+        </div>
+
     </s:layout-component>
 </s:layout-render>
