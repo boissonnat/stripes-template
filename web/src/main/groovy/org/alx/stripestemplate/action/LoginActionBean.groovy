@@ -12,6 +12,7 @@ import net.sourceforge.stripes.validation.ValidationErrors
 import net.sourceforge.stripes.validation.LocalizableError
 import org.alx.stripestemplate.stripes.noext.PasswordTypeConverter
 import net.sourceforge.stripes.action.UrlBinding
+import net.sourceforge.stripes.action.SimpleMessage
 
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
@@ -42,6 +43,7 @@ class LoginActionBean extends BaseActionBean {
         if (loginUrl != null) {
             return new RedirectResolution(loginUrl);
         }
+        context.messages.add(new SimpleMessage("Welcome !"))
         return new RedirectResolution(HomeActionBean.class);
     }
 
