@@ -16,6 +16,7 @@ import net.sourceforge.stripes.validation.ValidationMethod
 import net.sourceforge.stripes.validation.ValidationErrors
 import net.sourceforge.stripes.validation.LocalizableError
 import net.sourceforge.stripes.validation.ValidationErrorHandler
+import net.sourceforge.stripes.action.SimpleMessage
 
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
@@ -43,6 +44,7 @@ class RegisterActionBean extends BaseActionBean implements ValidationErrorHandle
 
     @DontValidate
     Resolution cancel(){
+        context.messages.add(new SimpleMessage("Registration aborted !"))
         return new RedirectResolution(HomeActionBean.class);
     }
 
@@ -51,7 +53,7 @@ class RegisterActionBean extends BaseActionBean implements ValidationErrorHandle
         roles.add(store.findBy(Role.class, "name", AppConstants.ROLE_USER));
         user.setRoles(roles);
         store.save(user);
-
+        context.messages.add(new SimpleMessage("Registration done.<br/>Enjoy !"))
         return new RedirectResolution(LoginActionBean.class);
     }
 

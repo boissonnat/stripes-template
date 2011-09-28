@@ -19,10 +19,16 @@
         <link rel="shortcut icon" type="image/x-icon" href="${contextPath}/css/img/app-icon.png" />
         <link rel="stylesheet" type="text/css" href="${contextPath}/css/reset.css">
         <link rel="stylesheet" type="text/css" href="${contextPath}/css/style.css">
+
         <s:layout-component name="head">
         </s:layout-component>
+
     </head>
     <body>
+
+    <%-- Display messages --%>
+    <s:messages/>
+
 
     <%-- The Header --%>
     <div id="header">
@@ -43,9 +49,9 @@
                 </c:when>
                 <c:otherwise>
 
-                        <s:link beanclass="org.alx.stripestemplate.action.LoginActionBean" class="login-link">
-                            <fmt:message key="application.login"/>
-                        </s:link>
+                    <s:link beanclass="org.alx.stripestemplate.action.LoginActionBean" class="login-link">
+                        <fmt:message key="application.login"/>
+                    </s:link>
 
                 </c:otherwise>
             </c:choose>

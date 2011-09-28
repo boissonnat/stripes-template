@@ -80,7 +80,7 @@ input[type=submit]:hover {
     margin-left: 10px;
     margin-right:30px;
     margin-top: 20px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 
 #footer {
@@ -130,7 +130,7 @@ td.form-submit {
     margin: 30px;
     padding-top: 15px;
     padding-left: 50px;
-    border-top: solid 1px #BFBFBF; 
+    border-top: solid 1px #BFBFBF;
 }
 
 ul.arrow {
@@ -145,4 +145,22 @@ li.arrow{
 li.arrow::before {
     content: ">> ";
     color: #A65353
+}
+
+div.messages {
+    display: block;
+    border-bottom: 1px solid #004B9E;
+    border-right: 1px solid #004B9E;
+    border-left: 1px solid #004B9E;
+    -moz-border-radius-bottomleft:10px;
+    -moz-border-radius-bottomright:10px;
+    margin-bottom: 8px;
+    background: url('img/info-icon.png') no-repeat 10px 2px #B4D3F6;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+div.messages p {
+    padding-top: 5px;
+    color: #004B9E;
+    text-align: center;
 }
