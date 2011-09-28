@@ -12,16 +12,16 @@
         <s:form beanclass="org.alx.stripestemplate.action.LoginActionBean">
             <table class="form">
                 <tr>
-                    <td class="form-label"><s:label for="user.email"/>:</td>
+                    <td class="form-label"><s:label for="user.email"/> :</td>
                     <td class="form-value"><s:text name="email"/></td>
                 </tr>
                 <tr>
-                    <td class="form-label"><s:label for="user.password"/>:</td>
+                    <td class="form-label"><s:label for="user.password"/> :</td>
                     <td class="form-value"><s:password name="password"/></td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" class="form-submit"><s:submit name="login" class="login-button"/></td>
+                    <td colspan="2" class="form-submit"><s:submit name="login"/></td>
                 </tr>
 
             </table>
