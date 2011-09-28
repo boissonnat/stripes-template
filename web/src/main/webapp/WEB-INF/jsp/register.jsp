@@ -5,23 +5,23 @@
     <s:layout-component name="body">
         <h1><fmt:message key="register.title"/></h1>
 
-        <%-- Display Stripes errors if any --%>
-        <s:errors/>
-
         <%-- Register form --%>
         <s:form beanclass="org.alx.stripestemplate.action.RegisterActionBean">
             <table class="form">
                 <tr>
                     <td class="form-label"><s:label for="user.email"/> :</td>
                     <td class="form-value"><s:text name="user.email"/></td>
+                    <td><s:errors field="user.email"/></td>
                 </tr>
                 <tr>
                     <td class="form-label"><s:label for="user.password"/> :</td>
                     <td class="form-value"><s:password name="user.password"/></td>
+                    <td><s:errors field="user.password"/></td>
                 </tr>
                 <tr>
                     <td class="form-label"><s:label for="user.confirmPassword"/> :</td>
                     <td class="form-value"><s:password name="confirmPassword"/></td>
+                    <td><s:errors field="confirmPassword"/></td>
                 </tr>
                 <tr>
                     <td class="form-submit" colspan="2">

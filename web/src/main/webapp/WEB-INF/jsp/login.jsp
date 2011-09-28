@@ -5,19 +5,18 @@
     <s:layout-component name="body">
         <h1><fmt:message key="login.title"/></h1>
 
-        <%-- Display Stripes errors if any --%>
-        <s:errors/>
-
         <%-- The login form --%>
         <s:form beanclass="org.alx.stripestemplate.action.LoginActionBean">
             <table class="form">
                 <tr>
                     <td class="form-label"><s:label for="user.email"/> :</td>
                     <td class="form-value"><s:text name="email"/></td>
+                    <td><s:errors field="email"/></td>
                 </tr>
                 <tr>
                     <td class="form-label"><s:label for="user.password"/> :</td>
                     <td class="form-value"><s:password name="password"/></td>
+                    <td><s:errors field="password"/></td>
                 </tr>
 
                 <tr>

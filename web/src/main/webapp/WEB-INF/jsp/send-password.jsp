@@ -5,15 +5,13 @@
     <s:layout-component name="body">
         <h1><fmt:message key="sendpassword.title"/></h1>
 
-        <%-- Display errors --%>
-        <s:errors/>
-
         <%-- Form --%>
         <s:form beanclass="org.alx.stripestemplate.action.ForgetPasswordActionBean">
             <table class="form">
                 <tr>
                     <td class="form-label"><s:label for="user.email"/> :</td>
                     <td class="form-value"><s:text name="email" size="50"/></td>
+                    <td><s:errors field="email"/></td>
                 </tr>
                 <tr>
                     <td class="form-submit" colspan="2">

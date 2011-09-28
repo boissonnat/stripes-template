@@ -164,3 +164,17 @@ div.messages p {
     color: #004B9E;
     text-align: center;
 }
+
+span.error{
+    background: url('img/error-icon.png') no-repeat 5px 1px;
+    font-style: italic;
+    font-size: 15px;
+    margin-left: 10px;
+    padding-left: 25px;
+    color: #880000 ;
+}
+
+input.error {
+    border: 2px solid #880000 ;
+    background-color: #FFDDDD;
+}
