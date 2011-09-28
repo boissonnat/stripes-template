@@ -1,65 +1,82 @@
 package org.alx.stripestemplate.stripes.noext;
 
+import org.alx.stripestemplate.model.Role;
+import org.alx.stripestemplate.model.User;
 import org.alx.stripestemplate.persistence.HibernateStore;
 import org.hibernate.Transaction;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
  */
 public class MyInitListener implements ServletContextListener {
 
-  public static final String CTX_STORE_KEY = "store";
+    public static final String CTX_STORE_KEY = "store";
 
-  private ServletContext servletContext;
+    private ServletContext servletContext;
 
-  public ServletContext getServletContext() {
-    return servletContext;
-  }
+    public ServletContext getServletContext() {
+        return servletContext;
+    }
 
-  public void contextInitialized(ServletContextEvent e) {
-    servletContext = e.getServletContext();
-    HibernateStore store =  new HibernateStore();
-    servletContext.setAttribute(CTX_STORE_KEY, store);
+    public void contextInitialized(ServletContextEvent e) {
+        servletContext = e.getServletContext();
+        HibernateStore store =  new HibernateStore();
+        servletContext.setAttribute(CTX_STORE_KEY, store);
 
-    /*****************************************/
-    /** Init database with users and groups **/
-    /*****************************************/
-    // Create and init a transaction
-    Transaction tx = store.getSessionFactory().getCurrentSession().beginTransaction();
+        /*****************************************/
+        /** Init database with users and groups **/
+        /*****************************************/
+        // Create and init a transaction
+        Transaction tx = store.getSessionFactory().getCurrentSession().beginTransaction();
+
+        // Create Roles
+        Role userRole = new Role();
+        userRole.setName("userRole");
+
+        Role adminRole = new Role();
+        adminRole.setName("adminRole");
 
 
-    // Create Groups
-//    UserGroup userGroup = new UserGroup([name:'userGroup'])
-//    UserGroup adminGroup = new UserGroup([name:'adminGroup'])
+        // Helper : create list with role
+        List<Role> userRoleList = new ArrayList<Role>();
+        userRoleList.add(userRole);
+        List<Role> adminRoleList = new ArrayList<Role>();
+        adminRoleList.add(adminRole);
 
-    // Helper : create list with group
-//    UserGroup[] userGroupList = [userGroup]
-//    UserGroup[] adminGroupList = [adminGroup]
+        // Save the groups
+        store.save(userRole);
+        store.save(adminRole);
 
-    // Save the groups
-//    store.save(userGroup)
-//    store.save(adminGroup)
+        // Create some users with role
+        User admin = new User();
+        admin.setEmail("admin@admin.com");
+        PasswordTypeConverter converter = new PasswordTypeConverter();
+        admin.setPassword(converter.hash("admin"));
+        admin.setRoles(adminRoleList);
 
-    // Create some users with group
-//    User admin = new User([userName:'admin', password:'admin', email:'admin@fiemser.eu', groups:userGroupList])
-//    User user = new User([userName:'user', password:'user', email:'user@fiemser.eu', groups:adminGroupList])
+        User user = new User();
+        user.setEmail("user@user.com");
+        user.setPassword(converter.hash("user"));
+        user.setRoles(userRoleList);
 
-    // Save users
-//    store.save(admin)
-//    store.save(user)
+        // Save users
+        store.save(admin);
+        store.save(user);
 
-    tx.commit();
+        tx.commit();
 
-  }
+    }
 
-  public void contextDestroyed(ServletContextEvent e) {
-    HibernateStore store = (HibernateStore)e.getServletContext().getAttribute(CTX_STORE_KEY);
-    store.close();
-  }
+    public void contextDestroyed(ServletContextEvent e) {
+        HibernateStore store = (HibernateStore)e.getServletContext().getAttribute(CTX_STORE_KEY);
+        store.close();
+    }
 
 
 }
