@@ -7,7 +7,7 @@ class HomePageTest  extends WebTestBase{
 
   void testHome(){
     webtest("HomePage test"){
-      goToPage '/Home.htm'
+      goToPage '/Home'
       verifyTitle "Home"
     }
   }

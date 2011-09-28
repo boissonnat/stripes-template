@@ -21,7 +21,7 @@ import net.sourceforge.stripes.action.SimpleMessage
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
  */
-@UrlBinding("/Register.htm")
+@UrlBinding("/Register")
 class RegisterActionBean extends BaseActionBean implements ValidationErrorHandler{
 
     private static final String VIEW = "/WEB-INF/jsp/register.jsp";

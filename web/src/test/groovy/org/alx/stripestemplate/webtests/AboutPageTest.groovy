@@ -7,7 +7,7 @@ class AboutPageTest extends WebTestBase{
 
   void testAbout(){
     webtest("AboutPage test"){
-      goToPage '/About.htm'
+      goToPage '/About'
       verifyTitle "About"
     }
   }

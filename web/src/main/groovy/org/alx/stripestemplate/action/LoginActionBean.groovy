@@ -17,7 +17,7 @@ import net.sourceforge.stripes.action.SimpleMessage
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
  */
-@UrlBinding('/Login.htm')
+@UrlBinding('/Login')
 class LoginActionBean extends BaseActionBean {
 
     private static final String VIEW = "/WEB-INF/jsp/login.jsp";

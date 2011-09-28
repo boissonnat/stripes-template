@@ -7,7 +7,7 @@ class LayoutPageTest extends WebTestBase{
 
     void testHome(){
         webtest("Layout test"){
-            goToPage '/Home.htm'
+            goToPage '/Home'
 
             // Check master layout
             verifyXPath xpath:"/html/body/div[@id='header']"

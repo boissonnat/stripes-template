@@ -26,7 +26,7 @@ import net.sourceforge.stripes.validation.LocalizableError
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
  */
-@UrlBinding("/SendPassword.htm")
+@UrlBinding("/SendPassword")
 class ForgetPasswordActionBean extends BaseActionBean{
 
     private static final String VIEW = "/WEB-INF/jsp/send-password.jsp"

@@ -8,7 +8,7 @@ import net.sourceforge.stripes.action.DefaultHandler
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
  */
-@UrlBinding('/Logout.htm')
+@UrlBinding('/Logout')
 class LogoutActionBean extends BaseActionBean{
 
     @DefaultHandler

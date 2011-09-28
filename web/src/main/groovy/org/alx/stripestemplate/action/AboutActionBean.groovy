@@ -8,7 +8,7 @@ import net.sourceforge.stripes.action.UrlBinding
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
  */
-@UrlBinding('/About.htm')
+@UrlBinding('/About')
 class AboutActionBean extends BaseActionBean {
 
     private static final String VIEW = "/WEB-INF/jsp/about.jsp"

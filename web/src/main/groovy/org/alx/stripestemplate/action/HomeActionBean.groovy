@@ -10,7 +10,7 @@ import org.alx.stripestemplate.util.AppConstants
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
  */
-@UrlBinding('/Home.htm')
+@UrlBinding('/Home')
 class HomeActionBean extends BaseActionBean {
 
     private static final String GUEST_HOME = "/WEB-INF/jsp/home.jsp";
