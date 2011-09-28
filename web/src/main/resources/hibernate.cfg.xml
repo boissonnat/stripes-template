@@ -47,6 +47,10 @@
         <!--<property name="show_sql">true</property>-->
 
         <!-- Mapping -->
+        <mapping class="org.alx.stripestemplate.model.ModelBase"/>
+        <mapping class="org.alx.stripestemplate.model.MyFakeObject"/>
+        <mapping class="org.alx.stripestemplate.model.User"/>
+        <mapping class="org.alx.stripestemplate.model.Role"/>
 
     </session-factory>
 </hibernate-configuration>
