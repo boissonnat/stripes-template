@@ -10,10 +10,13 @@ import net.sourceforge.stripes.validation.Validate
 import net.sourceforge.stripes.action.RedirectResolution
 import net.sourceforge.stripes.action.SimpleMessage
 import net.sourceforge.stripes.action.DontValidate
+import javax.annotation.security.RolesAllowed
+import org.alx.stripestemplate.util.AppConstants
 
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
  */
+@RolesAllowed("User")
 @UrlBinding('/mfo/{$event}/{id}')
 class MyFakeObjectActionBean extends BaseActionBean {
 

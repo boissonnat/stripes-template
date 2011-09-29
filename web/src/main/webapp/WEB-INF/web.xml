@@ -13,7 +13,16 @@
         </init-param>
         <init-param>
             <param-name>Extension.Packages</param-name>
-            <param-value>org.alx.stripestemplate.stripes.ext</param-value>
+            <param-value>
+                org.alx.stripestemplate.stripes.ext,
+                org.stripesstuff.plugin.security
+            </param-value>
+        </init-param>
+         <init-param>
+            <param-name>SecurityManager.Class</param-name>
+            <param-value>
+                org.alx.stripestemplate.stripes.noext.MySecurityManager
+            </param-value>
         </init-param>
         <init-param>
             <param-name>LocalePicker.Locales</param-name>

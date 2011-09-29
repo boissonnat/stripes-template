@@ -50,6 +50,7 @@ public class MyInitListener implements ServletContextListener {
         userRoleList.add(userRole);
         List<Role> adminRoleList = new ArrayList<Role>();
         adminRoleList.add(adminRole);
+        adminRoleList.add(userRole);
 
         // Save the groups
         store.save(userRole);
