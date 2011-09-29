@@ -1,5 +1,6 @@
 package org.alx.stripestemplate.stripes.noext;
 
+import org.alx.stripestemplate.model.MyFakeObject;
 import org.alx.stripestemplate.model.Role;
 import org.alx.stripestemplate.model.User;
 import org.alx.stripestemplate.persistence.HibernateStore;
@@ -70,7 +71,15 @@ public class MyInitListener implements ServletContextListener {
         store.save(admin);
         store.save(user);
 
-        tx.commit();
+        // Create some fake objects
+        MyFakeObject surf = new MyFakeObject();
+        surf.setName("Surf");
+        surf.setDescription("The best water sport ever...");
+        store.save(surf);
+        MyFakeObject snow = new MyFakeObject();
+        snow.setName("Snow");
+        snow.setDescription("Can't wait the powpow !");
+        store.save(snow);
 
     }
 

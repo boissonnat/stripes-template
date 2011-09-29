@@ -66,6 +66,7 @@
             <c:choose>
                 <c:when test="${not empty usermgr.user}">
                     <%-- Links for all connected users --%>
+                    <li><s:link beanclass="org.alx.stripestemplate.action.MyFakeObjectActionBean" event="list"><fmt:message key="application.navbar.fakeobjects"/></s:link></li>
                 </c:when>
                 <c:otherwise>
                     <%-- Links only for guest user --%>

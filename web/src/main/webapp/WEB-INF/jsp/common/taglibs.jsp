@@ -10,6 +10,9 @@
 <%-- This is so that you can conveniently refer to the context path with ${contextPath} --%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
+<%-- My taglib ! --%>
+<%@ taglib prefix="mt" tagdir="/WEB-INF/tags/mytags" %>
+
 <%-- Set the bundle ressource to use --%>
 <%-- As we always include the taglibs, by putting this here, we avoir to set the fmr bundle in each page ! Stripes is wonderful :)--%>
 <fmt:setBundle basename="${actionBean.class.name}"/>

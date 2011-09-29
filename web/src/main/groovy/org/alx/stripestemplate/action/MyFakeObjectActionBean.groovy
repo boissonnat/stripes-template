@@ -30,4 +30,8 @@ class MyFakeObjectActionBean extends BaseActionBean {
     MyFakeObject getMyFakeObject(){
         return store.load(MyFakeObject.class, id)
     }
+
+    List<MyFakeObject> getAllObjects(){
+        return store.load(MyFakeObject.class)
+    }
 }
