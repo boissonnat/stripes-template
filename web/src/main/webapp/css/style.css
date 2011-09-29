@@ -21,6 +21,12 @@ a {
     text-decoration: none;
 }
 
+th {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
 input {
     -moz-border-radius:2px;
     border: solid 1px #A65353;
@@ -90,6 +96,17 @@ input[type=submit]:hover {
     color: #A65353;
 }
 
+#object {
+    margin-left: 50px;
+}
+
+#object td {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}    
+
 /*
  * Define the classes
  */
@@ -121,9 +138,34 @@ td.form-value {
 
 }
 
+table.view{
+    margin-left: 50px;
+}
+
+td.view-label {
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+td.view-value {
+
+}
+
 td.form-submit {
     text-align: right;
     padding-top: 10px;
+}
+
+tr.odd {
+    color: #A65353;
+    background-color: #BFBFBF;
+}
+
+tr.even {
+    background-color: #A65353;
+    color: #BFBFBF;
 }
 
 .border-top {
@@ -160,6 +202,7 @@ div.messages {
     margin-right: 30%;
 }
 div.messages p {
+
     padding-top: 5px;
     color: #004B9E;
     text-align: center;
@@ -177,4 +220,23 @@ span.error{
 input.error {
     border: 2px solid #880000 ;
     background-color: #FFDDDD;
+}
+
+.actions ul{
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: -20px;
+    border-bottom: solid 1px #A65353;
+    border-left: solid 1px #A65353;
+    border-right: solid 1px #A65353;
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+    background-color: #BFBFBF;
+    padding: 3px;
+}
+.actions li {
+    padding-left: 7px;
+    padding-right: 7px;
+    display: inline;
 }
