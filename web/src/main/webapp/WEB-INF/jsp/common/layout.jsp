@@ -60,10 +60,22 @@
 
     <%-- The NavBar --%>
     <div id="navbar">
-        <s:layout-component name="menu">
-            <s:url var="url" beanclass="org.alx.stripestemplate.action.NavBarActionBean" prependContext="false" />
-            <jsp:include page="${url}"/>
-        </s:layout-component>
+        <ul>
+            <%-- Links for all user --%>
+            <li><s:link beanclass="org.alx.stripestemplate.action.HomeActionBean"><fmt:message key="application.navbar.home"/></s:link></li>
+            <c:choose>
+                <c:when test="${not empty usermgr.user}">
+                    <%-- Links for all connected users --%>
+                </c:when>
+                <c:otherwise>
+                    <%-- Links only for guest user --%>
+                    <li><s:link beanclass="org.alx.stripestemplate.action.LoginActionBean"><fmt:message key="application.navbar.login"/></s:link></li>
+                </c:otherwise>
+            </c:choose>
+
+            <%-- link 'About' for all user --%>
+            <li><s:link beanclass="org.alx.stripestemplate.action.AboutActionBean"><fmt:message key="application.navbar.about"/> </s:link></li>
+        </ul>
 
     </div>
 
