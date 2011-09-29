@@ -5,7 +5,7 @@
     <s:layout-component name="body">
         <h1>
             <fmt:message key="mfoview.title">
-                <fmt:param value="${actionBean.myFakeObject.name}"/>
+                <fmt:param value="${actionBean.fakeObject.name}"/>
             </fmt:message>
             <span class="actions">
                 <ul class="link-as-button">
@@ -16,11 +16,13 @@
                     </li>
                     <li>
                         <s:link class="link-as-button" beanclass="org.alx.stripestemplate.action.MyFakeObjectActionBean" event="edit">
+                            <s:param name="id" value="${actionBean.fakeObject.id}"/>
                             <img src="${contextPath}/css/img/medium/edit-icon.png" alt="edit">
                         </s:link>
                     </li>
                     <li>
                         <s:link class="link-as-button" beanclass="org.alx.stripestemplate.action.MyFakeObjectActionBean" event="delete">
+                            <s:param name="id" value="${actionBean.fakeObject.id}"/>
                             <img src="${contextPath}/css/img/medium/delete-icon.png" alt="delete">
                         </s:link>
                     </li>
@@ -31,11 +33,11 @@
         <table class="view">
             <tr>
                 <td class="view-label"><s:label for="myFakeObject.name"/> : </td>
-                <td class="view-value">${actionBean.myFakeObject.name}</td>
+                <td class="view-value">${actionBean.fakeObject.name}</td>
             </tr>
             <tr>
                 <td class="view-label"><s:label for="myFakeObject.description"/> : </td>
-                <td class="view-value">${actionBean.myFakeObject.description}</td>
+                <td class="view-value">${actionBean.fakeObject.description}</td>
             </tr>
         </table>
 
