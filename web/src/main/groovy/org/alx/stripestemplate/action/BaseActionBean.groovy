@@ -7,6 +7,7 @@ import org.alx.stripestemplate.stripes.ext.MyLocalePicker
 import javax.servlet.http.HttpServletRequest
 import net.sourceforge.stripes.action.LocalizableMessage
 import org.alx.stripestemplate.persistence.HibernateStore
+import org.alx.stripestemplate.util.MLogger
 
 /**
  * @author Alexis Boissonnat - alexis.boissonnat 'at' gmail.com
@@ -27,10 +28,9 @@ class BaseActionBean implements ActionBean {
         StringBuilder sb = new StringBuilder();
 
         // Start with the URI and the path
-        String uri = (String)
-            req.getAttribute("javax.servlet.forward.request_uri");
-        String path = (String)
-            req.getAttribute("javax.servlet.forward.path_info");
+        String uri = (String) req.getAttribute("javax.servlet.forward.request_uri");
+        String path = (String) req.getAttribute("javax.servlet.forward.path_info");
+
         if (uri == null) {
             uri = req.getRequestURI();
             path = req.getPathInfo();
@@ -40,8 +40,7 @@ class BaseActionBean implements ActionBean {
 
         // Now the request parameters
         sb.append('?');
-        Map<String,String[]> map =
-            new HashMap<String,String[]>(req.getParameterMap());
+        Map<String,String[]> map = new HashMap<String,String[]>(req.getParameterMap());
 
         // Remove previous locale parameter, if present.
         map.remove(MyLocalePicker.LOCALE);

@@ -8,6 +8,7 @@ import org.alx.stripestemplate.action.BaseActionBean;
 import org.alx.stripestemplate.action.LoginActionBean;
 import org.alx.stripestemplate.model.Role;
 import org.alx.stripestemplate.model.User;
+import org.alx.stripestemplate.util.MLogger;
 import org.stripesstuff.plugin.security.InstanceBasedSecurityManager;
 import org.stripesstuff.plugin.security.SecurityHandler;
 
@@ -20,6 +21,8 @@ import java.util.Collection;
  */
 public class MySecurityManager extends InstanceBasedSecurityManager implements SecurityHandler {
 
+    private static final MLogger logger = MLogger.getLogger(MySecurityManager.class);
+
     @Override
     protected Boolean isUserAuthenticated(ActionBean bean, Method handler) {
         return getUser(bean) != null;
@@ -28,9 +31,9 @@ public class MySecurityManager extends InstanceBasedSecurityManager implements S
     @Override
     protected Boolean hasRoleName(ActionBean bean, Method handler, String role) {
         User user = getUser(bean);
+        logger.debug("User : " + user);
         if (user != null) {
-            Collection<Role> roles = user.getRoles();
-            return roles != null && roles.contains(new Role(role));
+            if (user.hasRole(role)) return true;
         }
         return false;
     }
@@ -51,6 +54,7 @@ public class MySecurityManager extends InstanceBasedSecurityManager implements S
     }
 
     private User getUser(ActionBean bean) {
+        logger.debug("Get user from bean : " + ((BaseActionBean) bean).getContext().getUser());
         return ((BaseActionBean) bean).getContext().getUser();
     }
 

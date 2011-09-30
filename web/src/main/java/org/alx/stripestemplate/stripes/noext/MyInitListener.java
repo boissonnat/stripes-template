@@ -82,6 +82,9 @@ public class MyInitListener implements ServletContextListener {
         snow.setDescription("Can't wait the powpow !");
         store.save(snow);
 
+        // Commit transaction
+        tx.commit();
+
     }
 
     public void contextDestroyed(ServletContextEvent e) {
