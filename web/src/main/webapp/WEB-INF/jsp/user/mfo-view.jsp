@@ -21,7 +21,7 @@
                         </s:link>
                     </li>
                     <li>
-                        <s:link class="link-as-button" beanclass="org.alx.stripestemplate.action.MyFakeObjectActionBean" event="delete">
+                        <s:link class="link-as-button" beanclass="org.alx.stripestemplate.action.MyFakeObjectActionBean" event="delete"  onclick="return confirm('Delete ${object}?');">
                             <s:param name="id" value="${actionBean.fakeObject.id}"/>
                             <img src="${contextPath}/css/img/medium/delete-icon.png" alt="delete">
                         </s:link>

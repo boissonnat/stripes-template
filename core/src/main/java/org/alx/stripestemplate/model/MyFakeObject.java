@@ -30,4 +30,9 @@ public class MyFakeObject extends ModelBase{
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString(){
+        return "'"+name+"'";
+    }
 }

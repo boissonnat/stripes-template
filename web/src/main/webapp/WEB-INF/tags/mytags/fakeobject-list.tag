@@ -6,6 +6,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
 
+<fmt:setBundle basename="StripesResources"/>
+<fmt:message var="actions" key="fakeobjecttag.name"/>
+<fmt:message var="actions" key="fakeobjecttag.description"/>
+<fmt:message var="actions" key="fakeobjecttag.actions"/>
+
 <display:table name="${objects}" id="object" requestURI="${contextPath}">
 
     <display:column title="Name">
@@ -16,7 +21,7 @@
         ${object.description}
     </display:column>
 
-    <display:column title="Action">
+    <display:column title="${actions}">
         <%-- View --%>
         <s:link beanclass="org.alx.stripestemplate.action.MyFakeObjectActionBean" event="view">
             <s:param name="id" value="${object.id}"/>
@@ -30,7 +35,7 @@
         </s:link>
 
         <%-- Delete --%>
-        <s:link beanclass="org.alx.stripestemplate.action.MyFakeObjectActionBean" event="delete">
+        <s:link beanclass="org.alx.stripestemplate.action.MyFakeObjectActionBean" event="delete" onclick="return confirm('Delete ${object}?');">
             <s:param name="id" value="${object.id}"/>
             <img src="${contextPath}/css/img/small/delete-icon.png" alt="delete">
         </s:link>
