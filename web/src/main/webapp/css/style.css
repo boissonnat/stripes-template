@@ -168,6 +168,22 @@ tr.even {
     color: #BFBFBF;
 }
 
+th.sortable {
+    padding: 10px;
+    background: url(img/ascent.png) no-repeat 2px 2px;
+}
+
+
+th.order1 {
+    padding: 10px;
+    background: url(img/ascent.png) no-repeat 95px 7px;
+}
+th.order2 {
+    padding: 10px;
+    background: url(img/descent-icon.png) no-repeat 95px 7px;
+}
+
+
 .border-top {
     margin: 30px;
     padding-top: 15px;

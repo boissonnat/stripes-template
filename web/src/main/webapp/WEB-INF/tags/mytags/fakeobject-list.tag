@@ -7,17 +7,15 @@
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
 
 <fmt:setBundle basename="StripesResources"/>
-<fmt:message var="actions" key="fakeobjecttag.name"/>
-<fmt:message var="actions" key="fakeobjecttag.description"/>
+<fmt:message var="name" key="fakeobjecttag.name"/>
+<fmt:message var="description" key="fakeobjecttag.description"/>
 <fmt:message var="actions" key="fakeobjecttag.actions"/>
 
-<display:table name="${objects}" id="object" requestURI="${contextPath}">
+<display:table name="${objects}" id="object" requestURI="${contextPath}/mfo/list">
 
-    <display:column title="Name">
-        ${object.name}
-    </display:column>
+    <display:column title="${name}" sortable="true" property="name"/>
 
-    <display:column title="Description">
+    <display:column title="${description}">
         ${object.description}
     </display:column>
 
