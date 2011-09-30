@@ -2,7 +2,7 @@
 
 <fmt:setBundle basename="StripesResources"/>
 <fmt:message var="title" key="exception.title"/>
-<s:layout-render name="/WEB-INF/jsp/common/layout.jsp" title="${title}" >
+<s:layout-render name="/WEB-INF/jsp/common/layout-error.jsp" title="${title}" >
     <s:layout-component name="body">
         <p class="error">
             <fmt:message key="exception.notfound.message"/>

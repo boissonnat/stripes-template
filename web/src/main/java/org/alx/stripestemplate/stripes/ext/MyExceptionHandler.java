@@ -27,8 +27,6 @@ public class MyExceptionHandler extends DefaultExceptionHandler {
         return new ErrorResolution(HttpServletResponse.SC_NOT_FOUND);
     }
 
-
-
     public Resolution catchAll(Throwable exc, HttpServletRequest req, HttpServletResponse resp) {
         return new ForwardResolution(VIEW);
     }

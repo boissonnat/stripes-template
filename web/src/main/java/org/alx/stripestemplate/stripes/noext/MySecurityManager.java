@@ -1,9 +1,6 @@
 package org.alx.stripestemplate.stripes.noext;
 
-import net.sourceforge.stripes.action.ActionBean;
-import net.sourceforge.stripes.action.ErrorResolution;
-import net.sourceforge.stripes.action.RedirectResolution;
-import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.*;
 import org.alx.stripestemplate.action.BaseActionBean;
 import org.alx.stripestemplate.action.LoginActionBean;
 import org.alx.stripestemplate.model.Role;
@@ -22,6 +19,8 @@ import java.util.Collection;
 public class MySecurityManager extends InstanceBasedSecurityManager implements SecurityHandler {
 
     private static final MLogger logger = MLogger.getLogger(MySecurityManager.class);
+
+    private static final String VIEW = "/WEB-INF/jsp/unauthorized.jsp";
 
     @Override
     protected Boolean isUserAuthenticated(ActionBean bean, Method handler) {
@@ -50,7 +49,7 @@ public class MySecurityManager extends InstanceBasedSecurityManager implements S
             }
             return resolution;
         }
-        return new ErrorResolution(HttpServletResponse.SC_UNAUTHORIZED);
+        return new ForwardResolution(VIEW);
     }
 
     private User getUser(ActionBean bean) {
