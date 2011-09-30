@@ -256,3 +256,17 @@ input.error {
     padding-right: 7px;
     display: inline;
 }
+
+p.error {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 2px solid #880000 ;
+    background: url('img/warning-icon.png') no-repeat 15px 5px #FFDDDD;
+    -moz-border-radius: 10px;
+    color: #880000;
+    font-weight: bold;
+}
